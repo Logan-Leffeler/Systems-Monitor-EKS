@@ -8,7 +8,7 @@ api_client = client.ApiClient()
 
 # Define the deployment
 deployment = client.V1Deployment(
-    metadata = client.V1ObjectMeta(name="my-flask-app3"),
+    metadata = client.V1ObjectMeta(name="my-flask-app2"),
     spec = client.V1DeploymentSpec(
     replicas = 1,
     selector = client.V1LabelSelector(
@@ -40,10 +40,10 @@ api_instance.create_namespaced_deployment(
 
 # Define the service
 service = client.V1Service(
-    metadata = client.V1ObjectMeta(name = "my-flask-service3"),
+    metadata = client.V1ObjectMeta(name = "my-flask-service2"),
     spec = client.V1ServiceSpec(
         selector = {"app": "my-flask-app"},
-        ports = [client.V1ServicePort(port = 5000)],
+        ports = [client.V1ServicePort(port = 80, target_port = 5000)],
         type = "LoadBalancer"
     )
 )
