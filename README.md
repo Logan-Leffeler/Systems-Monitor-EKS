@@ -11,4 +11,4 @@ The application is accessible through a load balancer, which is pointing to two 
 [Click here for a live demo](https://systemmonitor.logan-leffeler.com)
 
 
-
+![A screenshot of the system monitor](https://github.com/Logan-Leffeler/Systems-Monitor-EKS/blob/main/Systemmonitor.png?raw=true)
